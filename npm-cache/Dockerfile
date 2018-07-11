@@ -1,7 +1,5 @@
 FROM node:10-alpine
 
-RUN echo -e "Host *\n\tStrictHostKeyChecking no\n" >>/root/.ssh/config && echo "nameserver 119.29.29.29" >>/etc/resolv.conf
-
 RUN echo "172.217.161.144  storage.googleapis.com" >>/etc/hosts && cat /etc/hosts
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
