@@ -3,7 +3,7 @@ FROM node:10-alpine
 RUN apk add --no-cache \
       openssl
       
-RUN npm cache add grpc@1.12.4
+RUN npm cache add grpc@1.12.4 && npm cache add grpc@1.13.0
 
 RUN npm config set unsafe-perm true && \ 
     npm install pm2@latest -g && \
