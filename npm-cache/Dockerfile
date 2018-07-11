@@ -1,8 +1,5 @@
 FROM node:10-alpine
 
-
-RUN mkdir -p /root/.ssh && echo -e "${GIT_KEY}" >>/root/.ssh/id_rsa && chmod 600 /root/.ssh/id_rsa
-
 RUN echo -e "Host *\n\tStrictHostKeyChecking no\n" >>/root/.ssh/config && echo "nameserver 119.29.29.29" >>/etc/resolv.conf
 
 RUN echo "172.217.161.144  storage.googleapis.com" >>/etc/hosts && cat /etc/hosts
