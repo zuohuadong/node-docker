@@ -6,6 +6,7 @@ RUN apk add --no-cache \
       
 RUN npm cache add grpc@1.12.4 && \
     npm cache add  grpc@1.13.0  && \
+    npm cache add  node-pre-gyp  && \
     npm cache add  node-gyp  && \
     npm cache add  isexe  && \
     npm cache add  which  
