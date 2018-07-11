@@ -4,11 +4,11 @@ RUN apk add --no-cache \
       openssl \
       python2
       
-RUN npm cache add grpc@1.12.4 \
-      grpc@1.13.0  \
-      node-gyp  \
-      isexe  \
-      which  
+RUN npm cache add grpc@1.12.4 && \
+    npm cache add  grpc@1.13.0  && \
+    npm cache add  node-gyp  && \
+    npm cache add  isexe  && \
+    npm cache add  which  
 
 RUN npm config set unsafe-perm true && \ 
     npm install pm2@latest -g && \
