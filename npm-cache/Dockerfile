@@ -4,7 +4,8 @@ RUN apk add --no-cache \
       openssl \
       python2
       
-RUN yarn add grpc@1.12.4 && \
+RUN cd /tmp && \
+    yarn add grpc@1.12.4 && \
     yarn add  grpc@1.13.0  && \
     yarn add  node-pre-gyp  && \
     yarn add  node-gyp  && \
