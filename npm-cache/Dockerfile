@@ -10,7 +10,8 @@ RUN cd /tmp && \
     yarn add  node-pre-gyp  && \
     yarn add  node-gyp  && \
     yarn add  isexe  && \
-    yarn add  which  
+    yarn add  which  && \
+    rm -rf /tmp
 
 RUN npm config set unsafe-perm true && \ 
     npm install pm2@latest -g && \
